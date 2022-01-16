@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Comissões</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="titulo">Comissões</h1>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            
+            <label for="filtro-tabela">Filtre seu cliente:</label>
+            <input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do cliente">
+
+
+            <table>
+                <thead> <!--Cabeçalho da tabela-->
+                    <tr>
+                        <th>CLIENTE</th>
+                        <th>VALOR</th>
+                        <th>% COMISSÃO</th>
+                        <th>VALOR COMISSÃO</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabela-clientes"> <!--Corpo da tabela-->
+                    <tr class="cliente" id="primeiro-cliente">
+                        <td class="info-nome">Rose</td>
+                        <td class="info-valor">15250.00</td>
+                        <td class="info-porcentagem">2</td>
+                        <td class="info-comissao">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+
+    <section class="container">
+        <h2 id="titulo-form">Adicionar novo cliente</h2>
+        <ul id="mensagens-erro">
+
+        </ul>
+        <form id="form-adiciona">
+            <div class="grupo">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite nome do cliente" class="campo">
+            </div>
+            <div class="grupo">
+                <label for="valor">Valor:</label>
+                <input type="text" name="valor" id="valor" placeholder="Digite o valor" class="campo">
+            </div>
+            <div class="grupo">
+                <label for="porcentagem">Porcentagem:</label>
+                <input type="text" name="porcentagem" id="porcentagem" placeholder="Digite a porcentagem" class="campo">
+            </div>
+
+            <button id="adicionar-cliente" class="bto-principal">Adicionar</button>
+        </form>
+    </section>
+
+    <script src="js/calcula-comissao.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/filtro-clientes.js"></script>
+</body>
+</html>
